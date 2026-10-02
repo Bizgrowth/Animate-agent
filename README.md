@@ -1,14 +1,17 @@
 # Animate-agent
 
 Upload a photo, pick a motion style, get a short animated clip (MP4/GIF). Built with Claude Code.
+See `docs/` for the product brief, tool list, and build playbook.
 
-## Two animation tiers
-| Tier | What it does | Cost | Tool |
-|---|---|---|---|
-| **Instant** | Pan/zoom ("Ken Burns"), parallax, floating, pulse on the photo | ~Free (runs in browser) | Motion (motion.dev) + FFmpeg export |
-| **AI** | True animation (hair moves, water flows, camera orbits) from a text prompt | Pay per clip | Image-to-video API behind a swappable adapter (Replicate, Runway, Luma, etc.) |
+## Run it on your computer
+1. Install Node.js 20+ (nodejs.org).
+2. In this folder: `npm install`
+3. `npm run dev`, then open http://localhost:3000
 
-## How to use this kit
-1. Read `docs/00-product-brief.md` (scope, users, costs) and `docs/01-tools-and-accounts.md` (sign-ups).
-2. Open this repo in Claude Code. `CLAUDE.md` and `.claude/skills/` load automatically.
-3. Follow `docs/02-build-playbook.md`: paste each phase prompt in order, test, commit.
+## Current status
+Phase 1 done: photo upload, checks, location-data removal, preview.
+Phase 2 done: 6 instant motion styles with live preview, 2-8 s duration, 9:16 / 1:1 / 16:9 shapes.
+Phase 2 done: 6 instant motion styles with live preview, 2-8 s duration, 9:16 / 1:1 / 16:9 shapes.
+
+## Before committing
+`npm run lint && npm run build`

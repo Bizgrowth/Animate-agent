@@ -7,6 +7,8 @@ Photo-to-animation web app. Owner is non-technical: explain decisions in plain b
 - AI tier via provider adapter in `src/lib/providers/` (never call a vendor API from UI code)
 - Storage: local `./uploads` in dev; S3-compatible (e.g. Cloudflare R2/Supabase) in prod
 
+@AGENTS.md
+
 ## Rules
 - API keys live only in `.env.local` (see `.env.example`). Never commit secrets or log them.
 - Validate uploads: JPG/PNG/WebP only, max 10 MB, strip EXIF location data.
